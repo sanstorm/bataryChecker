@@ -26,3 +26,9 @@ void bataryChecker::on_actionAbo_ut_triggered()
             "EITHER EXPRESS OR IMPLIED.</b>"));
 }
 
+
+void bataryChecker::on_actionE_xit_triggered()
+{
+    QCoreApplication::exit(0);
+}
+

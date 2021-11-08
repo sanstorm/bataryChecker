@@ -18,6 +18,8 @@ public:
 private slots:
     void on_actionAbo_ut_triggered();
 
+    void on_actionE_xit_triggered();
+
 private:
     Ui::bataryChecker *ui;
 };
