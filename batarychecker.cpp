@@ -1,5 +1,6 @@
 #include "batarychecker.h"
 #include "ui_batarychecker.h"
+#include <QMessageBox>
 
 bataryChecker::bataryChecker(QWidget *parent)
     : QMainWindow(parent)
@@ -11,5 +12,17 @@ bataryChecker::bataryChecker(QWidget *parent)
 bataryChecker::~bataryChecker()
 {
     delete ui;
+}
+
+
+void bataryChecker::on_actionAbo_ut_triggered()
+{
+    QMessageBox::about(this, tr("About BataryChecker"), tr(
+            "Copyright (c) 2021, Maxim Kozorez aka <b>Sanstorm </b>.<br>"
+            "The program and the accompanying materials are licensed and made available under the terms and conditions of the BSD License.<br>"
+            "The full text of the license may be found at <a href=http://opensource.org/licenses/bsd-license.php>OpenSource.org</a>.<br><br>"
+            "<b>THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN \"AS IS\" BASIS, "
+            "WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, "
+            "EITHER EXPRESS OR IMPLIED.</b>"));
 }
 

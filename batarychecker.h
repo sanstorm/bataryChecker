@@ -15,6 +15,9 @@ public:
     bataryChecker(QWidget *parent = nullptr);
     ~bataryChecker();
 
+private slots:
+    void on_actionAbo_ut_triggered();
+
 private:
     Ui::bataryChecker *ui;
 };
