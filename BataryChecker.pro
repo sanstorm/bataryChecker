@@ -9,13 +9,17 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    fakesmbus.cpp \
     main.cpp \
-    batarychecker.cpp
+    batarychecker.cpp \
+    sbscomands.cpp
 
 HEADERS += \
     SLABCP2112.h \
     batarychecker.h \
+    fakesmbus.h \
     ismbus.h \
+    sbscomands.h \
     types.h
 
 FORMS += \
