@@ -12,7 +12,7 @@ public:
     int SMBus_Reset();
     int SMBus_Configure();
     int SMBus_Read();
-    int SMBus_Write();
+    int SMBus_Write(int sbs);
 };
 
 #endif // FAKESMBUS_H

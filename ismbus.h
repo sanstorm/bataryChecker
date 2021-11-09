@@ -9,7 +9,7 @@ public:
     virtual int SMBus_Reset()=0;
     virtual int SMBus_Configure()=0;
     virtual int SMBus_Read()=0;
-    virtual int SMBus_Write()=0;
+    virtual int SMBus_Write(int sbs)=0;
 };
 
 #endif // ISMBUS_H

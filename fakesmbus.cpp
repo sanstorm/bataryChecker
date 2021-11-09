@@ -5,7 +5,7 @@ FakeSmbus::FakeSmbus()
 
 }
 
-int FakeSmbus::SMBus_Open(int a){
+int FakeSmbus::SMBus_Open(){
     return 1;
 }
 
@@ -21,6 +21,6 @@ int FakeSmbus::SMBus_Configure(){
 int FakeSmbus::SMBus_Read(){
     return 1;
 }
-int FakeSmbus::SMBus_Write(){
-    return 1;
+int FakeSmbus::SMBus_Write(int sbs){
+    return sbs;
 }

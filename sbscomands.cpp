@@ -6,7 +6,7 @@ SBSComands::SBSComands()
     this->smbus = new FakeSmbus();
 }
 
-int SBSComands::getManufacturer(){
-    this->smbus->SMBus_Write();
+int SBSComands::getManufacturerName(){
+    this->smbus->SMBus_Write(MANUFACTURER_NAME);
     return 1;
 }
