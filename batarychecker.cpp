@@ -32,3 +32,10 @@ void bataryChecker::on_actionE_xit_triggered()
     QCoreApplication::exit(0);
 }
 
+
+void bataryChecker::on_pushButton_clicked()
+{
+
+    this->ui->plainTextEdit->insertPlainText(QString::number(sbs.getManufacturerName()));
+}
+
