@@ -2,11 +2,20 @@
 #define SBSCOMANDS_H
 
 #include "ismbus.h"
+#include "fakesmbus.h"
 
 
 class SBSComands
 {
     ISmbus *smbus;
+
+    enum {
+        CP2112,
+        STM32,
+        MSP430,
+        ARDUINO,
+        FAKE,
+    };
     enum sbsCommands {
         MANUFACTURER_ACCESS,        // 0x00
         REMAINING_CAPACITY_ALARM,   // 0x01
@@ -46,6 +55,8 @@ class SBSComands
         MANUFACTURER_DATA           // 0x23
     };
 public:
+    int adapter;
+    int setAdapter();
     SBSComands();    
     int getManufacturerName();
 };

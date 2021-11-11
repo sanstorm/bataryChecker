@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "sbscomands.h"
+#include "settingsdialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class bataryChecker; }
@@ -16,6 +17,7 @@ class bataryChecker : public QMainWindow
 public:
     bataryChecker(QWidget *parent = nullptr);
     ~bataryChecker();
+     SettingsDialog *settingsDialog;
 
 private slots:
     void on_actionAbo_ut_triggered();
@@ -23,6 +25,8 @@ private slots:
     void on_actionE_xit_triggered();
 
     void on_pushButton_clicked();
+
+    void on_actionSettings_triggered();
 
 private:
     Ui::bataryChecker *ui;

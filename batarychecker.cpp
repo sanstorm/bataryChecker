@@ -7,6 +7,9 @@ bataryChecker::bataryChecker(QWidget *parent)
     , ui(new Ui::bataryChecker)
 {
     ui->setupUi(this);
+    settingsDialog =new SettingsDialog(this);
+    ui->pushButton->setDisabled(true);
+    ui->plainTextEdit->setReadOnly(true);
 }
 
 bataryChecker::~bataryChecker()
@@ -39,3 +42,12 @@ void bataryChecker::on_pushButton_clicked()
     this->ui->plainTextEdit->insertPlainText(QString::number(sbs.getManufacturerName()));
 }
 
+
+void bataryChecker::on_actionSettings_triggered()
+{
+    if(settingsDialog->exec()){
+        sbs.setAdapter();
+        ui->statusbar->showMessage(QString::number(sbs.adapter = settingsDialog->ui->comboBox->currentIndex()));
+        ui->pushButton->setDisabled(false);
+    }
+}

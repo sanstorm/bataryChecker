@@ -2,7 +2,6 @@
 
 FakeSmbus::FakeSmbus()
 {
-
 }
 
 int FakeSmbus::SMBus_Open(){

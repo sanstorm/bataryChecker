@@ -12,7 +12,8 @@ SOURCES += \
     fakesmbus.cpp \
     main.cpp \
     batarychecker.cpp \
-    sbscomands.cpp
+    sbscomands.cpp \
+    settingsdialog.cpp
 
 HEADERS += \
     SLABCP2112.h \
@@ -20,10 +21,12 @@ HEADERS += \
     fakesmbus.h \
     ismbus.h \
     sbscomands.h \
+    settingsdialog.h \
     types.h
 
 FORMS += \
-    batarychecker.ui
+    batarychecker.ui \
+    settingsdialog.ui
 
 TRANSLATIONS += \
     BataryChecker_ru_RU.ts
