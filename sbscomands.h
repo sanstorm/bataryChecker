@@ -55,7 +55,50 @@ class SBSComands
         MANUFACTURER_DATA           // 0x23
     };
 public:
+    char* manufacturerName[12];
+    char* deviceName[8];
+    char* deviceChemistry[5];
+    char* manufacturerData[15];
+    char* authenticate[21];
     int adapter;
+    char* buffer[1];
+    unsigned int remainingCapacityAlarml;
+    unsigned int remainingTimeAlarm;
+    char batteryMode[1];
+    signed int atRate;
+    unsigned int atRateTimeToFull;
+    unsigned int atRateTimeToEmpty;
+    unsigned int atRateOK;
+    unsigned int temperature;
+    unsigned int  voltage;
+    signed int current;
+    signed int averageCurrent;
+    unsigned int maxError;
+    unsigned int relativeStateOfCharge;
+    unsigned int absoluteStateOfCharge;
+    unsigned int remainingCapacity;
+    unsigned int fullChargeCapacity;
+    unsigned int runTimeToEmpty;
+    unsigned int averageTimeToEmpty;
+    unsigned int averageTimeToFull;
+    unsigned int chargingCurrent;
+    unsigned int chargingVoltage;
+    unsigned int batteryStatus2;
+    unsigned int cycleCount;
+    unsigned int designCapacity;
+    unsigned int designVoltage;
+    char* specificationInfo[1];
+    unsigned int manufactureDate;
+    char* serialNumber[1];
+    unsigned intCellVoltage4;
+    unsigned intCellVoltage3;
+    unsigned intCellVoltage2;
+    unsigned intCellVoltage1;
+
+
+
+
+
     int setAdapter();
     SBSComands();    
     int readManufacturerAccess();
