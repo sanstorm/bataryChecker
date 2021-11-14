@@ -39,7 +39,7 @@ void bataryChecker::on_actionE_xit_triggered()
 void bataryChecker::on_pushButton_clicked()
 {
 
-    this->ui->plainTextEdit->insertPlainText(QString::number(sbs.getManufacturerName()));
+    this->ui->plainTextEdit->insertPlainText(QString::number(sbs.readManufacturerName()));
 }
 
 

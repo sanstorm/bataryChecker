@@ -33,6 +33,6 @@ int SBSComands::setAdapter(){
     return this->adapter;
 };
 
-int SBSComands::getManufacturerName(){
+int SBSComands::readManufacturerName(){
     return this->smbus->SMBus_Write(MANUFACTURER_NAME);
 }

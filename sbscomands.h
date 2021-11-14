@@ -58,7 +58,65 @@ public:
     int adapter;
     int setAdapter();
     SBSComands();    
-    int getManufacturerName();
+    int readManufacturerAccess();
+    int writeManufacturerAccess();
+    int readRemainingCapacityAlarm();
+    int writeRemainingCapacityAlarm();
+    int readRemainingTimeAlarm();
+    int writeRemainingTimeAlarm();
+    int readBatteryMaode();
+    int writeBattaryMode();
+    int readAtRate();
+    int writeAtRate();
+    int readAtRateTimeToFull();
+    int readAtRateTimeToEmpty();
+    //If AtRate function returns >0, AtRateOK always returns TRUE.
+    int readRateOk();
+    // This read-word function returns an unsigned integer value of the temperature in units of 0.1°K,
+    int readTemperature();
+    //  This read-word function returns an unsigned integer value of the sum of the individual cell voltage measurements in mV with a range of 0 to 20000 mV.
+    int readVoltage();
+    //This read-word function returns a signed integer value of the measured current being supplied (or accepted) by the battery in mA, with a range of –32,768 to 32,767. A positive value indicates charge current and a negative value indicates discharge.
+    int readCurrent();
+    int readAverageCurrent();
+    int readMaxError();
+    int readRelativeStateOfCharge();
+    int readAbsoluteStateOfCharge();
+    int readRemainingCapacity();
+    int writeRemaingCapacity();
+    int readFullChargeCapacity();
+    int readtimeToEmpty();
+    int readAverageTimeToEmpty();
+    int readAverageTimeToFull();
+    int readChargingCurrent();
+    int readChargingVoltage();
+    int readBataryStatus();
+    int readCycleCount();
+    int writeCycleCount();
+    int readDesignCapacity();
+    int writeDesignCapasity();
+    int readDesignVoltage();
+    int writeDesignVoltage();
+    int readSpecificationInfo();
+    int writeSpecificationInfo();
+    int readManufacturerDate();
+    int writeManufacturerDate();
+    int readSerialNumber();
+    int writeSerialNumber();
+    int readDeviceName();
+    int writeDeviceName();
+    int readDeviceChemistry();
+    int writeDeviceChemistry();
+    int readManufacturerData();
+    int writeManufacturerData();
+    int readAuthenticate();
+    int writeAuthenticate();
+    int readCellVoltage1();
+    int readCellVoltage2();
+    int readCellVoltage3();
+    int readCellVoltage4();
+    int readManufacturerName();
+    int writeManufacturerName();
 };
 
 #endif // SBSCOMANDS_H
